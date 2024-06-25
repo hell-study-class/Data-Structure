@@ -49,15 +49,15 @@
 | Week 4-2 (2024.07.22) | LinkedStack | | | |
 | Week 5-1 (2024.07.25) | BinaryTree | | | |
 | Week 5-2 (2024.07.29) | BST | | | |
-| Week 6-1 (2024.08.01) | Graph | | | |
-| Week 6-2 (2024.08.05) | Hash Map | | | |
-| Week 7-1 (2024.08.08) | Bubble Sort | | | |
-| Week 7-2 (2024.08.12) | Selection Sort | | | |
-| Week 8-1 (2024.08.15) | Insertion Sort | | | |
+| Week 6-1 (2024.08.01) | AVL Tree | | | |
+| Week 6-2 (2024.08.05) | Red-black Tree | | | |
+| Week 7-1 (2024.08.08) | Graph | | | |
+| Week 7-2 (2024.08.12) | Hash Map | | | |
+| Week 8-1 (2024.08.15) | Bubble Sort, Selection Sort, Insertion Sort | | | |
 | Week 8-2 (2024.08.19) | Merge Sort | | | |
 | Week 9-1 (2024.08.22) | Quick Sort | | | |
-| Week 9-2 (2024.08.26) | AVL Tree | | | |
-| Week 10-1 (2024.08.29) | Red-black Tree | | | |
+| Week 9-2 (2024.08.26) | 미정 | | | |
+| Week 10-1 (2024.08.29) | 미정 | | | |
 | Week 10-2 (미정) | 미정 | | | |
 | Week 11-1 (미정) | 미정 | | | |
 | Week 11-2 (미정) | 미정 | | | |
