@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="custom" target="17" />
+      <module name="custom.main" target="17" />
+      <module name="custom.test" target="17" />
+      <module name="dataStructure" target="17" />
+      <module name="dataStructure.main" target="17" />
+      <module name="dataStructure.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
