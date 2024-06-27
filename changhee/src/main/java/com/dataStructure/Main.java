@@ -1,4 +1,4 @@
-package com.yukgaejang;
+package com.dataStructure;
 
 public class Main {
 
