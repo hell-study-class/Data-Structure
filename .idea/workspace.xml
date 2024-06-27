@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9615cbdc-f01b-4806-9777-c80af8d997f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dataStructure/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataStructure/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataStructure/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataStructure/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1주차" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +60,10 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "corretto-17 (2)",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -104,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719468953831</updated>
-      <workItem from="1719468958439" duration="171000" />
+      <workItem from="1719468958439" duration="330000" />
     </task>
     <servers />
   </component>
