@@ -38,30 +38,30 @@
 - 9월 이후 일정은 추후 협의 필요
   
 | 주차 | 주제 | 태형 | 인호 | 창희 | 우용
-| :-- | :-- | :--: | :--: | :--: | :--: 
-| Week 1-1 (2024.06.27) | ArrayList | | | | 
-| Week 1-2 (2024.07.01) | LinkedList | | | | 
-| Week 2-1 (2024.07.04) | DoubleLinkedList | | | |
-| Week 2-2 (2024.07.08) | CircularLinkedList | | | |
-| Week 3-1 (2024.07.11) | ArrayQueue | | | |
-| Week 3-2 (2024.07.15) | LinkedQueue | | | |
-| Week 4-1 (2024.07.18) | ArrayStack | | | |
-| Week 4-2 (2024.07.22) | LinkedStack | | | |
-| Week 5-1 (2024.07.25) | BinaryTree | | | |
-| Week 5-2 (2024.07.29) | BST | | | |
-| Week 6-1 (2024.08.01) | AVL Tree | | | |
-| Week 6-2 (2024.08.05) | Red-black Tree | | | |
-| Week 7-1 (2024.08.08) | Graph | | | |
-| Week 7-2 (2024.08.12) | Hash Map | | | |
-| Week 8-1 (2024.08.15) | Bubble Sort, Selection Sort, Insertion Sort | | | |
-| Week 8-2 (2024.08.19) | Merge Sort | | | |
-| Week 9-1 (2024.08.22) | Quick Sort | | | |
-| Week 9-2 (2024.08.26) | 미정 | | | |
-| Week 10-1 (2024.08.29) | 미정 | | | |
-| Week 10-2 (미정) | 미정 | | | |
-| Week 11-1 (미정) | 미정 | | | |
-| Week 11-2 (미정) | 미정 | | | |
-| Week 12-1 (미정) | 미정 | | | |
-| Week 12-2 (미정) | 미정 | | | |
-| Week 13-1 (미정) | 미정 | | | |
-| Week 13-2 (미정) | 미정 | | | |
+| :-- | :-- |:-:|:--:|:--:| :--: 
+| Week 1-1 (2024.06.27) | ArrayList | ✅ | ✅  | ✅  | ✅
+| Week 1-2 (2024.07.01) | LinkedList |   |    |    | 
+| Week 2-1 (2024.07.04) | DoubleLinkedList |   |    |    |
+| Week 2-2 (2024.07.08) | CircularLinkedList |   |    |    |
+| Week 3-1 (2024.07.11) | ArrayQueue |   |    |    |
+| Week 3-2 (2024.07.15) | LinkedQueue |   |    |    |
+| Week 4-1 (2024.07.18) | ArrayStack |   |    |    |
+| Week 4-2 (2024.07.22) | LinkedStack |   |    |    |
+| Week 5-1 (2024.07.25) | BinaryTree |   |    |    |
+| Week 5-2 (2024.07.29) | BST |   |    |    |
+| Week 6-1 (2024.08.01) | AVL Tree |   |    |    |
+| Week 6-2 (2024.08.05) | Red-black Tree |   |    |    |
+| Week 7-1 (2024.08.08) | Graph |   |    |    |
+| Week 7-2 (2024.08.12) | Hash Map |   |    |    |
+| Week 8-1 (2024.08.15) | Bubble Sort, Selection Sort, Insertion Sort |   |    |    |
+| Week 8-2 (2024.08.19) | Merge Sort |   |    |    |
+| Week 9-1 (2024.08.22) | Quick Sort |   |    |    |
+| Week 9-2 (2024.08.26) | 미정 |   |    |    |
+| Week 10-1 (2024.08.29) | 미정 |   |    |    |
+| Week 10-2 (미정) | 미정 |   |    |    |
+| Week 11-1 (미정) | 미정 |   |    |    |
+| Week 11-2 (미정) | 미정 |   |    |    |
+| Week 12-1 (미정) | 미정 |   |    |    |
+| Week 12-2 (미정) | 미정 |   |    |    |
+| Week 13-1 (미정) | 미정 |   |    |    |
+| Week 13-2 (미정) | 미정 |   |    |    |
