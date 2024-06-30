@@ -1,6 +1,6 @@
 package com.dataStructure.collections.arrayList;
 
-public class MyListImpl<T> implements MyList<T> {
+public class MyArrayListImpl<T> implements MyArrayList<T> {
 
     private static final long serialVersionUID = 8683452581122892189L;
     private static final Object[] EMPTY_ELEMENTDATA = {};
@@ -9,7 +9,7 @@ public class MyListImpl<T> implements MyList<T> {
     private int size = 0;
 
 
-    public MyListImpl() {
+    public MyArrayListImpl() {
         elementData = new Object[DEFAULT_SIZE];
     }
 

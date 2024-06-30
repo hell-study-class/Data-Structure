@@ -9,7 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
-public class MyListImplTest {
+public class MyArrayListImplTest {
 
     Random rnd = new Random();
 
@@ -17,7 +17,7 @@ public class MyListImplTest {
     @DisplayName("List 초기화 시, size 0을 확인합니다.")
     public void assertInit() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
 
         // when
 
@@ -29,7 +29,7 @@ public class MyListImplTest {
     @DisplayName("clear 후 리스트 빈 값 여부를 확인합니다.")
     public void assertClear() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         list.add(rnd.nextInt(1, 10));
 
         // when
@@ -43,7 +43,7 @@ public class MyListImplTest {
     @DisplayName("5번 반복했을 때 모두 일치하는지 확인합니다.")
     public void assertAdd() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
 
         // when
         for (int i = 1; i < 5; i++) {
@@ -59,7 +59,7 @@ public class MyListImplTest {
     @Test
     public void addTest() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         IntStream.rangeClosed(1, 10).forEach(e -> list.add(e));
         int insertIdx = rnd.nextInt(1, 10);
         int insertValue = rnd.nextInt(1, 10);
@@ -76,7 +76,7 @@ public class MyListImplTest {
     @DisplayName("DEFAULT_SIZE 길이를 넘겼을 때 정상적으로 리스트 사이즈가 1 증가하는 지 확인합니다.")
     public void validateListSize() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         int defaultSize = 10;
         IntStream.rangeClosed(1, defaultSize).forEach(e -> list.add(e));
 
@@ -91,7 +91,7 @@ public class MyListImplTest {
     @DisplayName("n번 리스트 삽입 시, size() 값을 확인합니다.")
     public void assertSize() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         int count = rnd.nextInt(2, 10);
 
         // when
@@ -105,7 +105,7 @@ public class MyListImplTest {
     @DisplayName("특정 값이 리스트에 존재하면 true를 반환합니다.")
     public void assertContainsBySuccess() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         IntStream.rangeClosed(1, 10).forEach(e -> list.add(e));
 
         // when
@@ -118,7 +118,7 @@ public class MyListImplTest {
     @DisplayName("특정 값이 리스트에 존재하지 않으면 false를 반환합니다.")
     public void assertContainsByFail() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         IntStream.rangeClosed(1, 10).forEach(e -> list.add(e));
 
         // when
@@ -131,7 +131,7 @@ public class MyListImplTest {
     @DisplayName("index 범위를 벗어나면 ArrayIndexOutOfBoundsException 예외를 던집니다.")
     public void assertGetByIndexBounded() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         int data = rnd.nextInt();
         list.add(data);
 
@@ -146,7 +146,7 @@ public class MyListImplTest {
     @DisplayName("index가 0보다 작으면 ArrayIndexOutOfBoundsException 예외를 던집니다.")
     public void assertGetByNonNegative() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         int data = rnd.nextInt();
         list.add(data);
 
@@ -161,7 +161,7 @@ public class MyListImplTest {
     @DisplayName("index값으로 삭제한 데이터를 검증합니다.")
     public void assertRemove() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         for (int i = 0; i < 10; i++) {
             list.add(i);
         }
@@ -178,7 +178,7 @@ public class MyListImplTest {
     @DisplayName("존재하지 않는 Object를 삭제하면 false를 반환합니다.")
     public void assertRemoveByFail() {
         // given
-        MyList<String> list = new MyListImpl<>();
+        MyArrayList<String> list = new MyArrayListImpl<>();
         for (int i = 0; i < 10; i++) {
             list.add(UUID.randomUUID().toString());
         }
@@ -195,7 +195,7 @@ public class MyListImplTest {
     @DisplayName("존재하는 Object를 삭제하면 true를 반환합니다.")
     public void assertRemoveBySuccess() {
         // given
-        MyList<String> list = new MyListImpl<>();
+        MyArrayList<String> list = new MyArrayListImpl<>();
         for (int i = 0; i < 10; i++) {
             list.add(UUID.randomUUID().toString());
         }
@@ -212,7 +212,7 @@ public class MyListImplTest {
     @DisplayName("index 값이 size 보다 크면 ArrayIndexOutOfBoundsException 예외를 던집니다.")
     public void assertRemoveByMaxLength() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         int data = rnd.nextInt();
         list.add(data);
 
@@ -227,7 +227,7 @@ public class MyListImplTest {
     @DisplayName("index 값이 0보다 작으면 ArrayIndexOutOfBoundsException 예외를 던집니다.")
     public void assertRemoveByIndexNonNegative() {
         // given
-        MyList<Integer> list = new MyListImpl<>();
+        MyArrayList<Integer> list = new MyArrayListImpl<>();
         int data = rnd.nextInt();
         list.add(data);
 
@@ -242,7 +242,7 @@ public class MyListImplTest {
     @DisplayName("특정 데이터의 index 값을 검증합니다.")
     public void assertIndexOfSuccess() {
         // given
-        MyList<String> list = new MyListImpl<>();
+        MyArrayList<String> list = new MyArrayListImpl<>();
         IntStream.rangeClosed(1, 10).forEach(e -> list.add(UUID.randomUUID().toString()));
 
         // when
@@ -257,7 +257,7 @@ public class MyListImplTest {
     @DisplayName("존재하지 않는 데이터 인덱스를 조회하면 -1을 반환한다.")
     public void assertIndexOfFail() {
         // given
-        MyList<String> list = new MyListImpl<>();
+        MyArrayList<String> list = new MyArrayListImpl<>();
         IntStream.rangeClosed(1, 10).forEach(e -> list.add(UUID.randomUUID().toString()));
 
         // when
@@ -270,7 +270,7 @@ public class MyListImplTest {
     @DisplayName("마지막 데이터가 일치하면 1을 반환한다.")
     public void assertLastIndexOfSuccess() {
         // given
-        MyList<String> list = new MyListImpl<>();
+        MyArrayList<String> list = new MyArrayListImpl<>();
         IntStream.rangeClosed(1, 10).forEach(e -> list.add(UUID.randomUUID().toString()));
 
         // when
@@ -284,7 +284,7 @@ public class MyListImplTest {
     @DisplayName("마지막 데이터가 불일치하면 -1을 반환한다.")
     public void assertLastIndexOfFail() {
         // given
-        MyList<String> list = new MyListImpl<>();
+        MyArrayList<String> list = new MyArrayListImpl<>();
         IntStream.rangeClosed(1, 10).forEach(e -> list.add(UUID.randomUUID().toString()));
 
         // when
