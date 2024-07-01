@@ -2,10 +2,11 @@ package com.dataStructure;
 
 import com.dataStructure.collections.arrayList.ArrayList;
 import com.dataStructure.collections.arrayList.MyList;
+import com.dataStructure.collections.linkedList.MyDoublyLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        MyList<Long> list = new ArrayList();
+        MyList<Long> list = new MyDoublyLinkedList<>();
         System.out.println("빈 리스트가 출력되어야 한다");
         System.out.println("list = " + list);
         System.out.println();
