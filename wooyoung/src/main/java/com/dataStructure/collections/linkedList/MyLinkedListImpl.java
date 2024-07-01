@@ -12,15 +12,15 @@ public class MyLinkedListImpl<T> implements MyLinkedList {
 
 
     public MyLinkedListImpl() {
-        firstNode = new Node();
-        lastNode = firstNode;
+        firstNode = null;
+        lastNode = null;
     }
 
     @Override
     public boolean add(Object value) {
         Node<T> newNode = new Node(value);
 
-        if (firstNode.getValue() == null && firstNode.getNextNode() == null) {
+        if (size == 0) {
             firstNode = newNode;
             lastNode = newNode;
             size++;
@@ -56,7 +56,14 @@ public class MyLinkedListImpl<T> implements MyLinkedList {
     @Override
     public void addFirst(Object value) {
         Node<T> newNode = new Node(value);
-        newNode.setNextNode(firstNode);
+        if (size == 0) {
+            firstNode = newNode;
+            lastNode = newNode;
+            size++;
+            return;
+        }
+        Node<T> tempNode = firstNode;
+        newNode.setNextNode(tempNode);
         firstNode = newNode;
         size++;
     }
