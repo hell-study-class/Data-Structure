@@ -37,8 +37,9 @@ public class MyLinkedListImpl<T> implements MyLinkedList {
         Node<T> newNode = new Node(value);
 
         Node<T> previousNode = search(index - 1);
+        Node<T> nextNode = previousNode.getNextNode();
+
         previousNode.setNextNode(newNode);
-        Node<T> nextNode = search(index);
         newNode.setNextNode(nextNode);
         size++;
     }
@@ -161,7 +162,7 @@ public class MyLinkedListImpl<T> implements MyLinkedList {
 
         Node<T> previousNode = search(index - 1);
 
-        Node<T> removeNode = search(index);
+        Node<T> removeNode = previousNode.getNextNode();
 
         previousNode.setNextNode(removeNode.getNextNode());
         size--;
