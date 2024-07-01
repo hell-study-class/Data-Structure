@@ -1,5 +1,7 @@
 package com.dataStructure.collections.arrayList;
 
+import java.util.Arrays;
+
 public class ArrayList implements MyList{
 
     private Object[] array;
@@ -131,6 +133,8 @@ public class ArrayList implements MyList{
 
     @Override
     public String toString() {
-        return array.toString();
+        return "ArrayList{" +
+                "array=" + Arrays.toString(array) +
+                '}';
     }
 }
