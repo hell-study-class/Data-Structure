@@ -157,6 +157,7 @@ public class MyLinkedListImpl<T> implements MyLinkedList {
         Node<T> removeNode = search(index);
 
         previousNode.setNextNode(removeNode.getNextNode());
+        size--;
 
         return removeNode.getValue();
     }
