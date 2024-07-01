@@ -1,4 +1,4 @@
-package com.dataStructure.arraylist;
+package com.dataStructure.list;
 
 public interface MyList<T> {
     boolean add(T value);
