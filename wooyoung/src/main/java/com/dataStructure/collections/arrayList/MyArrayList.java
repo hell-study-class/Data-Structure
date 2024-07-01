@@ -2,7 +2,7 @@ package com.dataStructure.collections.arrayList;
 
 import java.io.Serializable;
 
-public interface MyList<T> extends Serializable {
+public interface MyArrayList<T> extends Serializable {
 
     static final long serialVersionUID = 1L;
 
