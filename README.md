@@ -40,8 +40,8 @@
 | 주차 | 주제 | 태형 | 인호 | 창희 | 우용
 | :-- | :-- |:-:|:--:|:--:| :--: 
 | Week 1-1 (2024.06.27) | ArrayList | ✅ | ✅  | ✅  | ✅
-| Week 1-2 (2024.07.01) | LinkedList |   |    |    | 
-| Week 2-1 (2024.07.04) | DoubleLinkedList |   |    |    |
+| Week 1-2 (2024.07.01) | LinkedList | ✅  | ✅   |    | ✅
+| Week 2-1 (2024.07.04) | DoubleLinkedList |   |    |  ✅  |
 | Week 2-2 (2024.07.08) | CircularLinkedList |   |    |    |
 | Week 3-1 (2024.07.11) | ArrayQueue |   |    |    |
 | Week 3-2 (2024.07.15) | LinkedQueue |   |    |    |
