@@ -81,6 +81,9 @@ public class MyCircularLinkedList<E> implements MyList<E> {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
+        if (size == 1) {
+            tail = null;
+        }
 
         Node<E> node = tail;
         for (int i = 0; i < index; i++) {
