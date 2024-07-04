@@ -2,7 +2,7 @@ package com.dataStructure;
 
 public class Main {
     public static void main(String[] args) {
-        InhoArraylist<Long> list = new InhoArraylist<>();
+        CircularList<Long> list = new CircularList<>();
         System.out.println("빈 리스트가 출력되어야 한다");
         System.out.println("list = " + list);
         System.out.println();
