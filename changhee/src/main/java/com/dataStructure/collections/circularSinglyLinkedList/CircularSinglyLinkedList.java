@@ -5,13 +5,10 @@ import com.dataStructure.collections.linkedList.MyDoublyLinkedList;
 
 public class CircularSinglyLinkedList<T> implements MyList<T> {
 
-    private Node<T> head;
     private Node<T> tail;
-
     private int size;
 
     public CircularSinglyLinkedList(){
-        this.head = null;
         this.tail = null;
         this.size = 0;
     }
@@ -30,10 +27,11 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
     public boolean add(T value) {
         Node<T> newNode = new Node<>(value, null);
         if(size == 0){
-            head = newNode;
-            tail = head;
+            tail = newNode;
+            newNode.next = newNode;
             size++;
         }else{
+            newNode.next = tail.next;
             tail.next = newNode;
             tail = newNode;
             size++;
@@ -50,13 +48,13 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
         }
         Node<T> newNode = new Node<>(value, null);
         if(index == 0){
-            newNode.next = head;
-            head = newNode;
-        }else if(index == size-1){
+            newNode.next = tail.next;
             tail.next = newNode;
+        }else if(index == size-1){
+            newNode.next = tail.next;
             tail = newNode;
         }else{
-            Node<T> current = head;
+            Node<T> current = tail.next;
             for(int i=0; i<index-1; i++){
                 current = current.next;
             }
@@ -68,9 +66,9 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
 
     @Override
     public boolean remove(Object o) {
-        Node<T> current = head;
+        Node<T> current = tail.next;
         if(current.item.equals(o)){
-            head = current.next;
+            tail.next = current.next;
             size--;
             return true;
         }
@@ -96,16 +94,20 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
         if(index < 0 || index >= size){
             System.out.println(-1);
         }
-        Node<T> current = head;
-        if(index <= 2){
+        Node<T> current = tail.next;
 
+        if(index == 0){
+            tail.next = current.next;
+            return current.item;
         }
-        for(int i=0; i<index-2; i++){
+
+        for(int i=0; i<index-1; i++){
             current = current.next;
         }
+        T result = current.next.item;
         current.next = current.next.next;
 
-        return null;
+        return result;
     }
 
     @Override
@@ -113,7 +115,7 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
         if(index < 0 || index >= size){
             System.out.println(-1);
         }
-        Node<T> current = head;
+        Node<T> current = tail.next;
         for(int i=0; i<index; i++){
             current = current.next;
         }
@@ -126,7 +128,7 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
         if(index < 0 || index >= size){
             System.out.println(-1);
         }
-        Node<T> current = head;
+        Node<T> current = tail.next;
         for(int i=0; i<index; i++){
             current = current.next;
         }
@@ -135,7 +137,7 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
 
     @Override
     public boolean contains(Object o) {
-        Node<T> current = head;
+        Node<T> current = tail.next;
         for(int i=0; i<size; i++){
             if(current.item.equals(o)){
                 return true;
@@ -147,7 +149,7 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
 
     @Override
     public int indexOf(Object o) {
-        Node<T> current = head;
+        Node<T> current = tail.next;
         for(int i=0; i<size; i++){
             if(current.item.equals(o)){
                 return i;
@@ -159,7 +161,7 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
 
     @Override
     public int lastIndexOf(Object o) {
-        Node<T> current = head;
+        Node<T> current = tail.next;
         int lastIndex = -1;
         for(int i=0; i<size; i++){
             if(current.item.equals(o)){
@@ -167,6 +169,7 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
                     lastIndex = i;
                 }
             }
+            current = current.next;
         }
         return lastIndex;
     }
@@ -183,7 +186,6 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
 
     @Override
     public void clear() {
-        head = null;
         tail = null;
         size = 0;
     }
@@ -191,13 +193,21 @@ public class CircularSinglyLinkedList<T> implements MyList<T> {
     @Override
     public String toString() {
         String result = "";
-        Node<T> n = head;
-        for(int i=0; i<size; i++){
-            result = result + n.item + " ";
-            n = n.next;
+        if(tail == null){
+            return "CircularLinkedList{" +
+                    result +
+                    '}';
+        }else{
+            Node<T> n = tail.next;
+
+            for(int i=0; i<size; i++){
+                result = result + n.item + " ";
+                n = n.next;
+            }
+            return "CircularLinkedList{" +
+                    result +
+                    '}';
         }
-        return "CircularLinkedList{" +
-                result +
-                '}';
-    }
+        }
+
 }

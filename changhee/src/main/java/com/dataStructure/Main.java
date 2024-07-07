@@ -47,13 +47,13 @@ public class Main {
         System.out.println("list.size() = " + list.size());
         System.out.println();
 
-//        System.out.println("list는 5, 6, 3, 4를 포함해야 한다");
-//        list.remove(1);
-//        System.out.println("list = " + list);
-//        System.out.println();
+        System.out.println("list는 5, 6, 3, 4를 포함해야 한다");
+        list.remove(1);
+        System.out.println("list = " + list);
+        System.out.println();
 
         System.out.println("2번 인덱스의 값이 11로 변경되어야 한다");
-        list.set(3, 11L);
+        list.set(2, 11L);
         System.out.println("list = " + list);
         System.out.println();
 
