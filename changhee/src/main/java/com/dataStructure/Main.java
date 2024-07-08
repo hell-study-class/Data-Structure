@@ -4,10 +4,11 @@ import com.dataStructure.collections.arrayList.ArrayList;
 import com.dataStructure.collections.arrayList.MyList;
 import com.dataStructure.collections.circularSinglyLinkedList.CircularSinglyLinkedList;
 import com.dataStructure.collections.linkedList.MyDoublyLinkedList;
+import com.dataStructure.collections.linkedList.MySingleLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        MyList<Long> list = new CircularSinglyLinkedList<>();
+        MyList<Long> list = new MySingleLinkedList<>();
         System.out.println("빈 리스트가 출력되어야 한다");
         System.out.println("list = " + list);
         System.out.println();
