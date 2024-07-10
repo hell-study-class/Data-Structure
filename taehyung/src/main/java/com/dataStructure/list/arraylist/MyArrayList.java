@@ -1,5 +1,6 @@
-package com.dataStructure.arraylist;
+package com.dataStructure.list.arraylist;
 
+import com.dataStructure.list.MyList;
 import java.util.Arrays;
 
 public class MyArrayList<E> implements MyList<E> {

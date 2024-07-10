@@ -1,4 +1,6 @@
-package com.dataStructure.arraylist;
+package com.dataStructure.list.arraylist;
+
+import com.dataStructure.list.MyList;
 
 public class MyArrayListExample {
     public static void main(String[] args) {
