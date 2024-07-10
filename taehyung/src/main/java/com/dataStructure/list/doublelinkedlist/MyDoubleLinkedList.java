@@ -2,10 +2,11 @@ package com.dataStructure.list.doublelinkedlist;
 
 import com.dataStructure.list.MyList;
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 public class MyDoubleLinkedList<E> implements MyList<E> {
 
-    static class Node<E> {
+    private static class Node<E> {
         E data;
         Node<E> prev;
         Node<E> next;
@@ -33,8 +34,21 @@ public class MyDoubleLinkedList<E> implements MyList<E> {
         this.size = 0;
     }
 
-    private boolean startFromHead(int index) {
-        return index < size / 2;
+    private Node<E> search(int index) {
+        Node<E> node;
+
+        if ((size / 2) > index) {
+            node = head;
+            for (int i = 0; i < index; i++) {
+                node = node.next;
+            }
+        } else {
+            node = tail;
+            for (int i = size - 1; i > index; i--) {
+                node = node.prev;
+            }
+        }
+        return node;
     }
 
     @Override
@@ -47,62 +61,84 @@ public class MyDoubleLinkedList<E> implements MyList<E> {
     public void add(int index, E value) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
+        }
+        if (index == 0) {
+            addFirst(value);
         } else if (index == size) {
             addLast(value);
-        } else if (index == 0) {
-            addFirst(value);
         } else {
-            if (startFromHead(index)) {
-                Node<E> node = head;
-                for (int i = 0; i < index - 1; i++) {
-                    node = node.next;
-                }
-                Node<E> newNode = new Node<>(value, node, node.next);
-                node.next.prev = newNode;
-                node.next = newNode;
-            } else {
-                Node<E> node = tail;
-                for (int i = size - 1; i > index; i--) {
-                    node = node.prev;
-                }
-                Node<E> newNode = new Node<>(value, node.prev, node);
-                node.prev.next = newNode;
-                node.prev = newNode;
-            }
+            Node<E> nextNode = search(index);
+            Node<E> prevNode = nextNode.prev;
+            Node<E> newNode = new Node<>(value, prevNode, nextNode);
             size++;
+            prevNode.next = newNode;
+            newNode.prev = newNode;
         }
     }
 
     private void addLast(E value) {
-        if (head == null) {
-            Node<E> node = new Node<>(value);
-            head = node;
-            tail = node;
-        } else {
-            Node<E> node = new Node<>(value, tail, null);
-            tail.next = node;
-            tail = node;
-        }
+        Node<E> last = tail;
+        Node<E> newNode = new Node<>(value, last, null);
+        tail = newNode;
         size++;
+        if (last == null) {
+            head = newNode;
+        } else {
+            last.next = newNode;
+        }
     }
 
     private void addFirst(E value) {
-        if (head == null) {
-            Node<E> node = new Node<>(value);
-            head = node;
-            tail = node;
-        } else {
-            Node<E> node = new Node<>(value, null, head);
-            head.prev = node;
-            head = node;
-        }
+        Node<E> first = head;
+        Node<E> newNode = new Node<>(value, null, first);
+        head = newNode;
         size++;
+
+        if (first == null) {
+            tail = newNode;
+        } else {
+            first.prev = newNode;
+        }
+    }
+
+    public E removeFirst() {
+        if (head == null) {
+            throw new NoSuchElementException();
+        }
+
+        E value = head.data;
+        Node<E> first = head.next;
+        size--;
+
+        if (first == null) {
+            tail = null;
+        } else {
+            first.prev = null;
+        }
+        return value;
+    }
+
+    public E removeLast() {
+        if (tail == null) {
+            throw new NoSuchElementException();
+        }
+
+        E value = tail.data;
+        Node<E> last = tail.prev;
+        size--;
+        tail = last;
+
+        if (last == null) {
+            head = null;
+        } else {
+            last.next = null;
+        }
+        return value;
     }
 
     @Override
     public boolean remove(Object o) {
         int index = indexOf(o);
-        System.out.println("index = " + index);
         if (index < 0) {
             return false;
         }
@@ -115,27 +151,22 @@ public class MyDoubleLinkedList<E> implements MyList<E> {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
-        if (startFromHead(index)) {
-            Node<E> node = head;
-            for (int i = 0; i < index - 1; i++) {
-                node = node.next;
-            }
-            node.next = node.next.next;
-            E e = node.next.data;
-            node.next.prev = node;
-            return e;
-        } else {
-            Node<E> node = tail;
-
-            for (int i = size - 1; i > index + 1; i--) {
-                node = node.prev;
-            }
-            E e = node.prev.data;
-            System.out.println("e = " + e);
-            node.prev = node.prev.prev;
-            node.prev.next = node;
-            return e;
+        if (index == 0) {
+            return removeFirst();
+        } else if (index == size - 1) {
+            return removeLast();
         }
+
+        Node<E> deleteNode = search(index);
+        Node<E> prevNode = deleteNode.prev;
+        Node<E> nextNode = deleteNode.next;
+        E value = deleteNode.data;
+        size--;
+
+        prevNode.next = nextNode;
+        prevNode.prev = prevNode;
+
+        return value;
     }
 
     @Override
@@ -143,19 +174,7 @@ public class MyDoubleLinkedList<E> implements MyList<E> {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
-        if (startFromHead(index)) {
-            Node<E> node = head;
-            for (int i = 0; i < index; i++) {
-                node = node.next;
-            }
-            return node.data;
-        } else {
-            Node<E> node = tail;
-            for (int i = size - 1; i > index; i--) {
-                node = node.prev;
-            }
-            return node.data;
-        }
+        return search(index).data;
     }
 
     @Override
@@ -163,19 +182,8 @@ public class MyDoubleLinkedList<E> implements MyList<E> {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
-        if (startFromHead(index)) {
-            Node<E> node = head;
-            for (int i = 0; i < index; i++) {
-                node = node.next;
-            }
-            node.data = value;
-        } else {
-            Node<E> node = tail;
-            for (int i = size - 1; i > index; i--) {
-                node = node.prev;
-            }
-            node.data = value;
-        }
+        Node<E> updateNode = search(index);
+        updateNode.data = value;
     }
 
     @Override
