@@ -46,7 +46,7 @@ public class QueueTest {
         System.out.println("10은 없으므로 false을 반환해야 한다");
         boolean contain10 = list.contains(10L);
         System.out.println("contain10 = " + contain10);
-        System.out.println();
+
 
         System.out.println("peek를 하면 가장 먼저 들어온 값을 가져와야한다");
         Long peek = list.peek();
