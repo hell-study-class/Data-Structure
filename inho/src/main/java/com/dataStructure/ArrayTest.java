@@ -1,6 +1,6 @@
 package com.dataStructure;
 
-public class Main {
+public class ArrayTest {
     public static void main(String[] args) {
         DoubleLinkedList<Long> list = new DoubleLinkedList<>();
         System.out.println("빈 리스트가 출력되어야 한다");
