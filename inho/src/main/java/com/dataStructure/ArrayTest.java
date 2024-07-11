@@ -1,10 +1,10 @@
 package com.dataStructure;
 
-public class Main {
+public class ArrayTest {
     public static void main(String[] args) {
-        InhoArraylist<Long> list = new InhoArraylist<>();
+        DoubleLinkedList<Long> list = new DoubleLinkedList<>();
         System.out.println("빈 리스트가 출력되어야 한다");
-        System.out.println("list = " + list);
+        System.out.println(list.toString());
         System.out.println();
 
         System.out.println("list는 비어있어야 한다");
@@ -16,7 +16,7 @@ public class Main {
         list.add(2L);
         list.add(3L);
         list.add(4L);
-        System.out.println("list = " + list);
+        System.out.println("list = " + list.toString());
         System.out.println();
 
         System.out.println("list는 비어있지 않아야 한다");
@@ -25,17 +25,17 @@ public class Main {
 
         System.out.println("0번 인덱스에 5가 추가되어야 한다");
         list.add(0, 5L);
-        System.out.println("list = " + list);
+        System.out.println("list = " + list.toString());
         System.out.println();
 
         System.out.println("2번 인덱스에 6이 추가되어야 한다");
         list.add(2, 6L);
-        System.out.println("list = " + list);
+        System.out.println("list = " + list.toString());
         System.out.println();
 
         System.out.println("값 2가 삭제되어야 한다");
         list.remove(2L);
-        System.out.println("list = " + list);
+        System.out.println("list = " + list.toString());
         System.out.println();
 
         System.out.println("list의 크기는 5이어야 한다");
@@ -44,12 +44,12 @@ public class Main {
 
         System.out.println("list는 5, 6, 3, 4를 포함해야 한다");
         list.remove(1);
-        System.out.println("list = " + list);
+        System.out.println("list = " + list.toString());
         System.out.println();
 
         System.out.println("2번 인덱스의 값이 11로 변경되어야 한다");
         list.set(2, 11L);
-        System.out.println("list = " + list);
+        System.out.println("list = " + list.toString());
         System.out.println();
 
         System.out.println("list는 6을 포함해야 한다");
