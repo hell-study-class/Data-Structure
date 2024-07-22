@@ -60,7 +60,7 @@ public class MyLinkedQueue<E> implements MyQueue<E> {
 
     @Override
     public E peek() {
-        if (back == null) {
+        if (front == null) {
             throw new RuntimeException("Queue is empty");
         }
         return front.data;
