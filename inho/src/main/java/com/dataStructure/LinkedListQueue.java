@@ -1,6 +1,6 @@
 package com.dataStructure;
 
-public class LinkedQueue<E> implements CustomQueueBasic<E> {
+public class LinkedListQueue<E> implements CustomQueueBasic<E> {
 
     class Node<E> {
         E data;
@@ -16,7 +16,7 @@ public class LinkedQueue<E> implements CustomQueueBasic<E> {
     private Node<E> tail;
     private int size;
 
-    public LinkedQueue() {
+    public LinkedListQueue() {
         this.head = null;
         this.tail = null;
         this.size = 0;
@@ -40,6 +40,12 @@ public class LinkedQueue<E> implements CustomQueueBasic<E> {
     public E poll() {
         if (head == null) {
             return null;
+        }else if(size == 1){
+            E result = head.data;
+            tail = null;
+            head = null;
+            return result;
+
         }
         Node<E> temp = head;
         E result = temp.data;
