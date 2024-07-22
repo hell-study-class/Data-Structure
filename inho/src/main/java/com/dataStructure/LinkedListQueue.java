@@ -40,6 +40,12 @@ public class LinkedListQueue<E> implements CustomQueueBasic<E> {
     public E poll() {
         if (head == null) {
             return null;
+        }else if(size == 1){
+            E result = head.data;
+            tail = null;
+            head = null;
+            return result;
+
         }
         Node<E> temp = head;
         E result = temp.data;
