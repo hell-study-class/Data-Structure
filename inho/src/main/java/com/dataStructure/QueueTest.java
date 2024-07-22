@@ -2,7 +2,7 @@ package com.dataStructure;
 
 public class QueueTest {
     public static void main(String[] args) {
-        LinkedQueue<Long> list = new LinkedQueue<>();
+        LinkedListQueue<Long> list = new LinkedListQueue<>();
         System.out.println("빈 리스트가 출력되어야 한다");
         System.out.println(list.toString());
         System.out.println();
