@@ -43,8 +43,8 @@
 | Week 1-2 (2024.07.01) | LinkedList | ✅  | ✅   |  ✅  | ✅
 | Week 2-1 (2024.07.04) | CircularLinkedList | ✅  |  ✅  |  ✅  | ✅
 | Week 2-2 (2024.07.08) | DoubleLinkedList | ✅  |  ✅  |  ✅  | ✅
-| Week 3-1 (2024.07.11) | ArrayQueue |   |    |    |
-| Week 3-2 (2024.07.15) | LinkedQueue |   |    |    |
+| Week 3-1 (2024.07.11) | ArrayQueue | ✅  |  ✅  |  ✅  | ✅
+| Week 3-2 (2024.07.15) | LinkedQueue | ✅  |  ✅  |  ✅  |
 | Week 4-1 (2024.07.18) | ArrayStack |   |    |    |
 | Week 4-2 (2024.07.22) | LinkedStack |   |    |    |
 | Week 5-1 (2024.07.25) | BinaryTree |   |    |    |
