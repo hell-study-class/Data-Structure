@@ -39,6 +39,7 @@ public class Main {
 
         System.out.println("list 첫 번째 값인 1이 나와야한다.");
         System.out.println("list.search = " + list.search(1));
+        System.out.println("list = " + list);
         System.out.println();
 
         System.out.println("list에 4가 없으므로 -1이 나와야 한다.");

@@ -55,7 +55,7 @@ public class MyArrayStack implements CustomArrayStack {
 
     @Override
     public int search(Object o) {
-        for(int i=0; i<size; i++){
+        for(int i=size-1; i >= 0; i--){
             if(arr[i].equals(o)){
                 return i+1;
             }
