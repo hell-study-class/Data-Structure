@@ -90,5 +90,20 @@ class ArrayStackImplTest {
         }
     }
 
+    @Test
+    void 데이터_40개를_저장한다() {
+        // given
+        ArrayStack stack = new ArrayStackImpl();
+        IntStream.rangeClosed(1, 40).forEach(e -> stack.push(e));
+
+        // when
+
+        // then
+        Assertions.assertEquals(stack.size(), 40);
+        for (int i = 40; i > 0; i--) {
+            Assertions.assertEquals(stack.pop(), i);
+        }
+    }
+
 
 }

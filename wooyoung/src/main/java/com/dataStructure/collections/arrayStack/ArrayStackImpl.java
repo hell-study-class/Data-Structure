@@ -34,11 +34,11 @@ public class ArrayStackImpl implements ArrayStack {
         if (size == 0) {
             throw new IllegalArgumentException("제거할 데이터가 없습니다.");
         }
-        if (DEFAULT_SIZE - 1 == (elementData.length - size)) {
+        if (size + 1 == (elementData.length / 2)) {
             if (elementData.length != DEFAULT_SIZE) {
                 Object[] tmp = elementData;
                 elementData = new Object[elementData.length / 2];
-                for (int i = 0; i < tmp.length; i++) {
+                for (int i = 0; i < elementData.length; i++) {
                     elementData[i] = tmp[i];
                 }
             }
