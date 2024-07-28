@@ -69,7 +69,7 @@ public class ArrayStackImpl implements ArrayStack {
     @Override
     public int search(Object o) {
         for (int i = 0; i < size; i++) {
-            if (elementData[i] == o) {
+            if (elementData[i].equals(o)) {
                 return i + 1;
             }
         }
