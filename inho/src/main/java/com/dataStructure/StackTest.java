@@ -2,7 +2,7 @@ package com.dataStructure;
 
 public class StackTest {
     public static void main(String[] args) {
-        ArrayStack<String> stack = new ArrayStack<>();
+        LinkedStack<String> stack = new LinkedStack<>();
 
         stack.push("a");
         stack.push("b");
@@ -22,7 +22,7 @@ public class StackTest {
         System.out.println(stack.toString());
         System.out.println("return: " + stack.peek());
 
-        System.out.println("index=1 반환해야 한다.");
+        System.out.println("index=0 반환해야 한다.");
         System.out.println(stack.search("c"));
 
     }
