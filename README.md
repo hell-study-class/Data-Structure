@@ -46,8 +46,8 @@
 | Week 3-1 (2024.07.11) | ArrayQueue | ✅  |  ✅  |  ✅  | ✅
 | Week 3-2 (2024.07.15) | LinkedQueue | ✅  |  ✅  |  ✅  | ✅
 | Week 4-1 (2024.07.25) | ArrayStack | ✅  |  ✅  |  ✅  |  ✅
-| Week 4-2 (2024.07.22) | LinkedStack |   |    |    |
-| Week 5-1 (2024.07.25) | BinaryTree |   |    |    |
+| Week 4-2 (2024.07.29) | LinkedStack | ✅  |  ✅  |  ✅  | ✅
+| Week 5-1 (2024.08.01) | BinaryTree |   |    |    |
 | Week 5-2 (2024.07.29) | BST |   |    |    |
 | Week 6-1 (2024.08.01) | AVL Tree |   |    |    |
 | Week 6-2 (2024.08.05) | Red-black Tree |   |    |    |
