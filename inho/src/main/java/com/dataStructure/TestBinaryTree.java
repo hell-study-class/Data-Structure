@@ -14,7 +14,6 @@ public class TestBinaryTree {
         tree.insert(7L);
         tree.insert(10L);
 
-        System.out.println(tree.searchNode(9L).right.data);
 //        System.out.println(tree.searchNode(1L).left.data);
 //        System.out.println(tree.searchNode(1L).right.data);
 //        tree.preorderTraversal();
